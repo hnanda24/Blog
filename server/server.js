@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json());
 
-mongoose.connect("mongodb://localhost:27017/blog-data")
+mongoose.connect("mongodb://localhost:27017/blog-app")
 .then(() => {console.log("DB Connected")})
 .catch((err) => console.error("Connection error", err));
 
