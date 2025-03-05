@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.router();
+const router = express.Router();
 const blogData = require('../Models/blog');
 
 router.post('/data', async(req,res) => {
@@ -16,7 +16,7 @@ router.post('/data', async(req,res) => {
     }
 })
 
-router.get('/', async(req,res) => {
+router.get('/displayData', async(req,res) => {
     try{
     const data = await blogData.find();
     res.json({data});
@@ -27,4 +27,4 @@ router.get('/', async(req,res) => {
     }
 })
 
-module.exports = router();
+module.exports = router;
