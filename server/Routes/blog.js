@@ -20,6 +20,7 @@ router.get('/displayData', async(req,res) => {
     try{
     const data = await blogData.find();
     res.json({data});
+    console.log({data});
     }
 
     catch(err){
