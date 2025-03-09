@@ -10,16 +10,16 @@ const BlogSection = () => {
       try {
         const response = await fetch("http://localhost:3000/blogData/displayData");
         const result = await response.json();
-        console.log("Fetched Blogs:", result); // Debugging line
-        setBlogs(result.data); // Ensure it's an array
+        // console.log("Fetched Blogs:", result); 
+        setBlogs(result.data); 
       } catch (error) {
         console.error("Error fetching blogs:", error);
-        setBlogs([]); // Prevent undefined errors
+        setBlogs([]); 
       }
     };
 
     fetchBlogs();
-  }, [blogs]);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-100 py-20 px-6"> 

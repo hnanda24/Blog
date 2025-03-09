@@ -4,7 +4,7 @@ import "./App.css";
 import BlogFooter from "./Components/BlogFooter";
 import BlogNavbar from "./Components/BlogNavbar";
 import BlogSection from "./Components/BlogSsection";
-// import CreateBlog from "./Components/CreateBlog";
+import CreateBlog from "./Components/CreateBlog";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
 import React from 'react'
@@ -16,14 +16,18 @@ function App() {
   return (
     <>
       <Router>
+        <BlogNavbar/>
         <Routes>
+
           <Route path="/" element={<> 
-            <BlogNavbar/>
-            <BlogSection />
-            <BlogFooter/> 
-          </>} />
-          {/* <Route path="/create" element={<CreateBlog />} /> */}
+              <BlogSection />
+            </>} />
+          <Route path="/create" element={<CreateBlog />} />
+          <Route path="/login" element = {<Login/>} />
+          <Route path='/register' element = {<Register/>} />
+          
         </Routes>
+        <BlogFooter/>
       </Router>
     </>
   );
