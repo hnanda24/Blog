@@ -19,9 +19,7 @@ function App() {
         <BlogNavbar/>
         <Routes>
 
-          <Route path="/" element={<> 
-              <BlogSection />
-            </>} />
+          <Route path="/" element={ <BlogSection />} />
           <Route path="/create" element={<CreateBlog />} />
           <Route path="/login" element = {<Login/>} />
           <Route path='/register' element = {<Register/>} />

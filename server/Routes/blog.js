@@ -7,6 +7,7 @@ router.post('/data', async(req,res) => {
     try{
     const {title,content,author} = req.body;
     const newBlog = new blogData({title,content,author});
+    console.log(newBlog);
     await newBlog.save();
     res.status(201).json({message: "Data saved"});
     }
@@ -20,7 +21,7 @@ router.get('/displayData', async(req,res) => {
     try{
     const data = await blogData.find();
     res.json({data});
-    console.log({data});
+    // console.log({data});
     }
 
     catch(err){
